@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,18 +39,18 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setOnItemSelectedListener((MenuItem item) -> {
             switch (item.getItemId()) {
                 case R.id.nav_add_an_activity:
-                    loadFragment(addAnActivityFragment);
+                    loadFragment(addAnActivityFragment, R.string.title_add_an_activity);
                     return true;
         /*
             case R.id.nav_compare:
-                loadFragment(compareFragment);
+                loadFragment(compareFragment, R.string.title_compare);
                 return true;
              */
                 case R.id.nav_dashboard:
-                    loadFragment(dashboardFragment);
+                    loadFragment(dashboardFragment, R.string.title_dashboard);
                     return true;
                 case R.id.nav_account:
-                    loadFragment(accountFragment);
+                    loadFragment(accountFragment, R.string.title_account);
                     return true;
 
                 default:
@@ -58,7 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loadFragment(Fragment fragment){
+    public void loadFragment(Fragment fragment, int string) {
+        TextView pageTitle = findViewById(R.id.page_title);
+        Resources resources = getResources();
+        pageTitle.setText(resources.getString(string));
+
         //fragment_container
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -66,4 +72,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }
