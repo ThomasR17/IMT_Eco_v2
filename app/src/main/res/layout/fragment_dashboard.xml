@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/darkGreen"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_total"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/sommeCO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textColorHint="#FF0707"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_voiture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:background="@color/lightGray"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/item_margin"
+        android:paddingLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/dashboard_car_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/title_dashboard"
+            android:src="@drawable/ic_car"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dashboard_car_output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_km_inline"
+            android:textColor="@android:color/secondary_text_light" />
+
+        <TextView
+            android:id="@+id/dashboard_car_output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@android:color/secondary_text_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_train"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/item_margin"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:paddingVertical="@dimen/item_margin"
+        android:paddingLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/dashboard_train_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/title_dashboard"
+            android:src="@drawable/ic_train"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dashboard_train_output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_km_inline"
+            android:textColor="@android:color/secondary_text_light" />
+
+        <TextView
+            android:id="@+id/dashboard_train_output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@android:color/secondary_text_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_plane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/item_margin"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:paddingVertical="@dimen/item_margin"
+        android:paddingLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/dashboard_plane_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/title_dashboard"
+            android:src="@drawable/ic_plane"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dashboard_plane_output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_km_inline"
+            android:textColor="@android:color/secondary_text_light" />
+
+        <TextView
+            android:id="@+id/dashboard_plane_output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@android:color/secondary_text_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/item_margin"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:paddingVertical="@dimen/item_margin"
+        android:paddingLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/dashboard_mail_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/title_dashboard"
+            android:src="@drawable/ic_mail"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dashboard_mail_output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_mails_inline"
+            android:textColor="@android:color/secondary_text_light" />
+
+        <TextView
+            android:id="@+id/dashboard_mail_output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@android:color/secondary_text_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_visio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:paddingVertical="@dimen/item_margin"
+        android:paddingLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/dashboard_visio_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/title_dashboard"
+            android:src="@drawable/ic_visio"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dashboard_visio_output1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_visio_inline"
+            android:textColor="@android:color/secondary_text_light" />
+
+        <TextView
+            android:id="@+id/dashboard_visio_output2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/output"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kgCO2"
+            android:textColor="@android:color/secondary_text_light" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/DefaultTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard_history"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:layout_marginStart="@dimen/default_margin" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>

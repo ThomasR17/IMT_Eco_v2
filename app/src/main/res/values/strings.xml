@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">IMT Eco</string>
+
+    <!-- General -->
+    <string name="logo">Logo</string>
+    <string name="kgCO2">kg CO2</string>
+    <string name="ok">OK</string>
+    <string name="output">______</string>
+        <!-- Transports -->
+        <string name="car">Car</string>
+        <string name="train">Train</string>
+        <string name="plane">Plane</string>
+        <!-- AccManagement -->
+        <string name="username_req">Username*</string>
+        <string name="password_req">Password*</string>
+        <string name="new_password_req">New password*</string>
+        <string name="confirm_password_req">Confirm password*</string>
+        <string name="your_answer_req">Your answer</string>
+        <!-- Modifiable -->
+        <string-array name="secret_question">
+            <item>What is your dad\'s birthday ?</item>
+        </string-array>
+
+    <!-- Page Add an Activity -->
+    <string name="title_add_an_activity">Add an activity</string>
+    <string name="distance">Distance</string>
+    <string name="km">km</string>
+
+    <string name="mail">Mail</string>
+    <string name="oneMo">5 Mo</string>
+    <string name="fiveMo">1 Mo</string>
+
+    <string name="visio">Visio</string>
+    <string name="time">Time</string>
+    <string name="minutes">minutes</string>
+
+    <!-- Page Dashboard -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="dashboard_transports">Transports</string>
+    <string name="dashboard_communications">Communications</string>
+    <string name="dashboard_km_inline">km soit:</string>
+    <string name="dashboard_mails_inline">mails soit:</string>
+    <string name="dashboard_visio_inline">min soit:</string>
+    <string name="dashboard_history">Recent activities:</string>
+    <string name="dashboard_total">Total:</string>
+
+    <!-- Page Compare -->
+    <string name="title_compare">Compare</string>
+    <string name="compare_act1">CO2 Act</string>
+    <string name="compare_vs">VS</string>
+    <string name="compare_act2">CO2 Act2</string>
+    <string name="compare_reset">Reset</string>
+
+    <!-- Page Account -->
+    <string name="title_account">Account</string>
+    <string name="account_label_img">account_img</string>
+    <string name="account_change_your_username">Change your username ?</string>
+    <string name="account_new_username">New username</string>
+    <string name="account_change_your_password">Change your password ?</string>
+    <string name="account_change_your_secret_response">Change your secret response ?</string>
+    <string name="account_new_response">New response</string>
+
+    <!-- Page Login -->
+    <string name="title_login">Login</string>
+    <string name="login_login">Login</string>
+
+    <!-- Page Reset_Password -->
+    <string name="title_reset_password">Reset password</string>
+    <string name="reset_password_img">reset password_img</string>
+    <string name="reset_password_enter_your_username">Enter your username</string>
+    <string name="reset_password_enter_your_new_password">Enter your new password</string>
+    <string name="reset_password_answer_your_secret_question">Answer your secret question</string>
+    <string name="reset_password_submit">submit</string>
+
+    <!-- Sign in -->
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_create_an_account">Create an account</string>
+    <string name="sign_in_it_s_quick_and_easy">It’s quick and easy.</string>
+    <string name="act_name">Activity Name</string>
+    <string name="act_description">Activity Description</string>
+    <string name="delete">delete</string>
+    <string name="password">Password</string>
+    <string name="email">Email Adress</string>
+    <string name="donthaveacc">Don\'t have an account ? Sign in here</string>
+
+</resources>
