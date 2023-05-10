@@ -87,12 +87,12 @@ public class User {
         return activities;
     }
 
-    public void add(Activity activity) {
+    public void addActivity(Activity activity) {
         activities.add(activity);
         maj();
     }
 
-    public void remove(Activity activity){
+    public void removeActivity(Activity activity){
         activities.remove(activity);
         maj();
     }

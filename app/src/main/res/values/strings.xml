@@ -23,16 +23,19 @@
 
     <!-- Page Add an Activity -->
     <string name="title_add_an_activity">Add an activity</string>
-    <string name="distance">Distance</string>
+    <string name="Distance_in_km">Distance in km</string>
     <string name="km">km</string>
 
     <string name="mail">Mail</string>
-    <string name="oneMo">5 Mo</string>
-    <string name="fiveMo">1 Mo</string>
+    <string name="Number_of_mail">Number of mails sent</string>
+    <string name="with_attachment">With attachment ?</string>
+    <string name="oneMo">1 Mo</string>
+    <string name="fiveMo">5 Mo</string>
 
     <string name="visio">Visio</string>
     <string name="time">Time</string>
     <string name="minutes">minutes</string>
+    <string name="Time_spent_in_minutes">Time spent in minutes</string>
 
     <!-- Page Dashboard -->
     <string name="title_dashboard">Dashboard</string>
@@ -82,5 +85,7 @@
     <string name="password">Password</string>
     <string name="email">Email Adress</string>
     <string name="donthaveacc">Don\'t have an account ? Sign in here</string>
+    <string name="welcome">Welcome !</string>
+    <string name="add_an_activity_bottomtext">Let\'s add an activity !</string>
 
 </resources>

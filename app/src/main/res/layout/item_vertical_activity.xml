@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="@+id/act_name"
         app:layout_constraintTop_toBottomOf="@+id/view_separation" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/delete_icon"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -61,6 +61,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView"
-        android:contentDescription="@string/delete" />
+        android:contentDescription="@string/delete"
+        android:background="@null"
+        android:onClick="onDashboardActDeleteClick"
+        android:scaleType="fitCenter"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

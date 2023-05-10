@@ -35,29 +35,17 @@ public class DashboardFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         //Affichage du total et sous-total
-        TextView somme_CO2;
-        TextView dashboard_car_output1;
-        TextView dashboard_car_output2;
-        TextView dashboard_train_output1;
-        TextView dashboard_train_output2;
-        TextView dashboard_plane_output1;
-        TextView dashboard_plane_output2;
-        TextView dashboard_mail_output1;
-        TextView dashboard_mail_output2;
-        TextView dashboard_visio_output1;
-        TextView dashboard_visio_output2;
-
-        somme_CO2 = view.findViewById(R.id.sommeCO2);
-        dashboard_car_output1 = view.findViewById(R.id.dashboard_car_output1);
-        dashboard_car_output2 = view.findViewById(R.id.dashboard_car_output2);
-        dashboard_train_output1 = view.findViewById(R.id.dashboard_train_output1);
-        dashboard_train_output2 = view.findViewById(R.id.dashboard_train_output2);
-        dashboard_plane_output1 = view.findViewById(R.id.dashboard_plane_output1);
-        dashboard_plane_output2 = view.findViewById(R.id.dashboard_plane_output2);
-        dashboard_mail_output1 = view.findViewById(R.id.dashboard_mail_output1);
-        dashboard_mail_output2 = view.findViewById(R.id.dashboard_mail_output2);
-        dashboard_visio_output1 = view.findViewById(R.id.dashboard_visio_output1);
-        dashboard_visio_output2 = view.findViewById(R.id.dashboard_visio_output2);
+        TextView somme_CO2 = view.findViewById(R.id.sommeCO2);
+        TextView dashboard_car_output1 = view.findViewById(R.id.dashboard_car_output1);
+        TextView dashboard_car_output2 = view.findViewById(R.id.dashboard_car_output2);
+        TextView dashboard_train_output1 = view.findViewById(R.id.dashboard_train_output1);
+        TextView dashboard_train_output2 = view.findViewById(R.id.dashboard_train_output2);
+        TextView dashboard_plane_output1 = view.findViewById(R.id.dashboard_plane_output1);
+        TextView dashboard_plane_output2 = view.findViewById(R.id.dashboard_plane_output2);
+        TextView dashboard_mail_output1 = view.findViewById(R.id.dashboard_mail_output1);
+        TextView dashboard_mail_output2 = view.findViewById(R.id.dashboard_mail_output2);
+        TextView dashboard_visio_output1 = view.findViewById(R.id.dashboard_visio_output1);
+        TextView dashboard_visio_output2 = view.findViewById(R.id.dashboard_visio_output2);
 
         somme_CO2.setText(String.format("%.2f", context.user.total_CO2));
         dashboard_car_output1.setText(String.format("%.2f", context.user.total_km_car));

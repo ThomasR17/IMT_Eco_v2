@@ -47,7 +47,7 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="@dimen/default_margin"
         android:layout_marginTop="10dp"
-        android:background="@color/lightGray"
+        android:background="@color/white"
         android:gravity="left"
         android:orientation="horizontal"
         android:paddingVertical="@dimen/item_margin"
@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -83,7 +82,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -103,7 +101,6 @@
         android:gravity="left"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:background="@color/lightGray"
         android:paddingVertical="@dimen/item_margin"
         android:paddingLeft="@dimen/default_margin">
 
@@ -121,7 +118,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -137,7 +133,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -157,7 +152,6 @@
         android:gravity="left"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:background="@color/lightGray"
         android:paddingVertical="@dimen/item_margin"
         android:paddingLeft="@dimen/default_margin">
 
@@ -175,7 +169,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -191,7 +184,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -211,7 +203,6 @@
         android:gravity="left"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:background="@color/lightGray"
         android:paddingVertical="@dimen/item_margin"
         android:paddingLeft="@dimen/default_margin">
 
@@ -229,7 +220,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -245,7 +235,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -265,7 +254,6 @@
         android:gravity="left"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:background="@color/lightGray"
         android:paddingVertical="@dimen/item_margin"
         android:paddingLeft="@dimen/default_margin">
 
@@ -283,7 +271,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 
@@ -299,7 +286,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:text="@string/output"
-            android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
 

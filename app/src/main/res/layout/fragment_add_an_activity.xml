@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/default_margin"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/add_an_activity_car_input"
+            style="@style/DefaultTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:hint="@string/Distance_in_km"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/default_margin"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+        <ImageButton
+            android:id="@+id/add_an_activity_car_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_car"
+            android:background="@null"
+            android:contentDescription="icon1"
+            android:onClick="onAddActivityCarSubmitClick"
+            android:scaleType="fitCenter"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_an_activity_train_input"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:hint="@string/Distance_in_km"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:layout_marginTop="@dimen/default_margin"
+            android:inputType="numberDecimal"
+            />
+
+        <ImageButton
+            android:id="@+id/add_an_activity_train_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_train"
+            android:layout_marginTop="@dimen/default_margin"
+            android:contentDescription="icon2"
+            android:background="@null"
+            android:onClick="onAddActivityTrainSubmitClick"
+            android:scaleType="fitCenter"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_an_activity_plane_input"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:hint="@string/Distance_in_km"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:layout_marginTop="@dimen/default_margin"
+            android:inputType="numberDecimal"
+            />
+        <ImageButton
+            android:id="@+id/add_an_activity_plane_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_plane"
+            android:layout_marginTop="@dimen/default_margin"
+            android:contentDescription="icon3"
+            android:background="@null"
+            android:onClick="onAddActivityPlaneSubmitClick"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_an_activity_mail_input"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:hint="@string/Number_of_mail"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:layout_marginTop="@dimen/default_margin"
+            android:inputType="number"
+            />
+        <ImageButton
+            android:id="@+id/add_an_activity_mail_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_mail"
+            android:layout_marginTop="@dimen/default_margin"
+            android:contentDescription="icon4"
+            android:background="@null"
+            android:onClick="onAddActivityMailSubmitClick"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/with_attachment"
+            style="@style/DefaultTextStyle"/>
+
+        <CheckBox
+            android:id="@+id/add_an_activity_mail_checkboxOneMo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oneMo"/>
+
+        <CheckBox
+            android:id="@+id/add_an_activity_mail_checkboxFiveMo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fiveMo"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/add_an_activity_visio_input"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:hint="@string/Time_spent_in_minutes"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:layout_marginTop="@dimen/default_margin"
+            android:inputType="number"
+            />
+        <ImageButton
+            android:id="@+id/add_an_activity_visio_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_visio"
+            android:layout_marginTop="@dimen/default_margin"
+            android:contentDescription="icon5"
+            android:background="@null"
+            android:onClick="onAddActivityVisioSubmitClick"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_an_activity_bottom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/add_an_activity_bottomtext"
+        android:textStyle="italic" />
+
+</LinearLayout>
