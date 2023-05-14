@@ -1,7 +1,7 @@
 package fr.imt_atlantique.imt_eco_v2.fragments;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import fr.imt_atlantique.imt_eco_v2.MainActivity;
 import fr.imt_atlantique.imt_eco_v2.R;
 import fr.imt_atlantique.imt_eco_v2.activity.Mail;
@@ -25,6 +26,7 @@ public class CompareFragment extends Fragment {
 
     public CompareFragment(MainActivity context){this.context=context;}
 
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -55,15 +57,15 @@ public class CompareFragment extends Fragment {
             String act1String = act1.getText().toString();
             String act2String = act2.getText().toString();
 
-            if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
+            if (!kmString.isEmpty() && !kmString.equals("0")) {
                 // Créer une nouvelle instance Transport
                 Transport act = new Transport(0, Double.parseDouble(kmString));
 
                 //Ajout dans comparaison
-                if (act1String==""){
+                if (act1String.equals("")){
                     act1.setText("Car " + kmString + " km");
                     act1_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
-                } else if (act2String=="") {
+                } else if (act2String.equals("")) {
                     act2.setText("Car " + kmString + " km");
                     act2_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
                 } else {
@@ -92,15 +94,15 @@ public class CompareFragment extends Fragment {
             String act1String = act1.getText().toString();
             String act2String = act2.getText().toString();
 
-            if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
+            if (!kmString.isEmpty() && !kmString.equals("0")) {
                 // Créer une nouvelle instance Transport
                 Transport act = new Transport(1, Double.parseDouble(kmString));
 
                 //Ajout dans comparaison
-                if (act1String==""){
+                if (act1String.equals("")){
                     act1.setText("Train " + kmString + " km");
                     act1_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
-                } else if (act2String=="") {
+                } else if (act2String.equals("")) {
                     act2.setText("Train " + kmString + " km");
                     act2_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
                 } else {
@@ -130,15 +132,15 @@ public class CompareFragment extends Fragment {
             String act2String = act2.getText().toString();
 
 
-            if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
+            if (!kmString.isEmpty() && !kmString.equals("0")) {
                 // Créer une nouvelle instance Transport
                 Transport act = new Transport(2, Double.parseDouble(kmString));
 
                 //Ajout dans comparaison
-                if (act1String==""){
+                if (act1String.equals("")){
                     act1.setText("Plane " + kmString + " km");
                     act1_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
-                } else if (act2String=="") {
+                } else if (act2String.equals("")) {
                     act2.setText("Plane " + kmString + " km");
                     act2_CO2.setText(String.format("%.2f",act.getEmCO2()) + "\nkgCO2");
                 } else {
@@ -174,18 +176,18 @@ public class CompareFragment extends Fragment {
             boolean pj_unMo=inputBox1.isChecked();
             boolean pj_cinqMo=inputBox5.isChecked();
 
-            if (nbMailString != null && !nbMailString.isEmpty() && !nbMailString.equals("0")) {
+            if (!nbMailString.isEmpty() && !nbMailString.equals("0")) {
                 int nbMail = Integer.parseInt(nbMailString);
                 // Créer une nouvelle instance Transport
                 Mail act = new Mail(nbMail, pj_unMo, pj_cinqMo);
-                String text="";
-                String textCO2="";
+                String text;
+                String textCO2;
 
                 if (act.getEmCO2() < 10e-3) {
                     if (nbMail > 1) {
                         if (!(pj_unMo || pj_cinqMo)) {
                             text=(nbMail + " mails\nwithout attachment");
-                        } else if (pj_unMo == true) {
+                        } else if (pj_unMo) {
                             text=(nbMail + " mails\n+ 1 Mo attachment");
                         } else {
                             text=(nbMail + " mails\n+ 5 Mo attachment");
@@ -193,7 +195,7 @@ public class CompareFragment extends Fragment {
                     } else {
                         if (!(pj_unMo || pj_cinqMo)) {
                             text=(nbMail + " mail\nwithout attachment");
-                        } else if (pj_unMo == true) {
+                        } else if (pj_unMo) {
                             text=(nbMail + " mail\n+ 1 Mo attachment");
                         } else {
                             text=(nbMail + " mail\n+ 5 Mo attachment");
@@ -204,7 +206,7 @@ public class CompareFragment extends Fragment {
                     if (nbMail > 1) {
                         if (!(pj_unMo || pj_cinqMo)) {
                             text=(nbMail + " mails\nwithout attachment");
-                        } else if (pj_unMo == true) {
+                        } else if (pj_unMo) {
                             text=(nbMail + " mails\n+ 1 Mo attachment");
                         } else {
                             text=(nbMail + " mails\n+ 5 Mo attachment");
@@ -212,7 +214,7 @@ public class CompareFragment extends Fragment {
                     } else {
                         if (!(pj_unMo || pj_cinqMo)) {
                             text=(nbMail + " mail\nwithout attachment");
-                        } else if (pj_unMo == true) {
+                        } else if (pj_unMo) {
                             text=(nbMail + " mail\n+ 1 Mo attachment");
                         } else {
                             text=(nbMail + " mail\n+ 5 Mo attachment");
@@ -222,10 +224,10 @@ public class CompareFragment extends Fragment {
                 }
 
                 //Ajout dans comparaison
-                if (act1String==""){
+                if (act1String.equals("")){
                     act1.setText(text);
                     act1_CO2.setText(textCO2);
-                } else if (act2String=="") {
+                } else if (act2String.equals("")) {
                     act2.setText(text);
                     act2_CO2.setText(textCO2);
                 } else {
@@ -257,11 +259,11 @@ public class CompareFragment extends Fragment {
             String act2String = act2.getText().toString();
 
 
-            if (nbMinString != null && !nbMinString.isEmpty() && !nbMinString.equals("0")) {
+            if (!nbMinString.isEmpty() && !nbMinString.equals("0")) {
                 int nbMin = Integer.parseInt(nbMinString);
                 // Créer une nouvelle instance Transport
                 Visio act = new Visio(nbMin);
-                String textCO2="";
+                String textCO2;
                 if (act.getEmCO2()<10e-3) {
                     textCO2=String.format("%.2f", act.getEmCO2()*1000) + "\ngCO2";
                 }else {
@@ -269,10 +271,10 @@ public class CompareFragment extends Fragment {
                 }
 
                 //Ajout dans comparaison
-                if (act1String==""){
+                if (act1String.equals("")){
                     act1.setText("Visio " + nbMinString + " min");
                     act1_CO2.setText(textCO2);
-                } else if (act2String=="") {
+                } else if (act2String.equals("")) {
                     act2.setText("Visio " + nbMinString + " min");
                     act2_CO2.setText(textCO2);
                 } else {
@@ -294,7 +296,7 @@ public class CompareFragment extends Fragment {
         //Suppression d'activité
         ImageButton del_act1 = view.findViewById(R.id.compare_delete_act1);
         del_act1.setOnClickListener(v -> {
-            if (act1.getText().toString()==""){
+            if (act1.getText().toString().equals("")){
                 builder.setTitle("Fail");
                 builder.setMessage("Nothing to delete.");
                 AlertDialog dialog = builder.create();
@@ -308,7 +310,7 @@ public class CompareFragment extends Fragment {
 
         ImageButton del_act2 = view.findViewById(R.id.compare_delete_act2);
         del_act2.setOnClickListener(v -> {
-            if (act2.getText().toString()==""){
+            if (act2.getText().toString().equals("")){
                 builder.setTitle("Fail");
                 builder.setMessage("Nothing to delete.");
                 AlertDialog dialog = builder.create();

@@ -50,7 +50,7 @@ public class AccountFragment extends Fragment {
                     landscapeList.add(landscape);
                 }
 
-                RecyclerView horizontalRecyclerView = view.findViewById(R.id.horizontal_recycler_view);
+                RecyclerView horizontalRecyclerView = view.findViewById(R.id.account_horizontal_recycler_view);
                 horizontalRecyclerView.setAdapter(new LandscapeAdapter(context, landscapeList, R.layout.item_horizontal_img));
 
                 // Set up automatic scrolling

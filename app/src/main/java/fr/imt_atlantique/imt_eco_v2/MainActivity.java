@@ -16,11 +16,21 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.nio.file.FileSystemLoopException;
 import java.util.ArrayList;
 
+import fr.imt_atlantique.imt_eco_v2.account.Login;
 import fr.imt_atlantique.imt_eco_v2.fragments.AccountFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.AddAnActivityFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.CompareFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.DashboardFragment;
 
+
+/*
+TODOLIST:
+Finir fragment_account
+faire login, resset, create
+dans login etc. ajouter spinner pour secret question(modifier attribut de User)
+
+base de données sur account
+ */
 public class MainActivity extends AppCompatActivity {
     //A changer en liste de User si on veut développer en plusieurs comptes
     public User user=User.Example();
@@ -36,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         compareFragment = new CompareFragment(this);
         dashboardFragment = new DashboardFragment(this);
         accountFragment = new AccountFragment(this);
+
+        // Charge le fragment Login par défaut
+        //loadFragment(new Login(this), R.string.title_login);
 
         //navigation
         BottomNavigationView navigationView = findViewById(R.id.navigation_view);

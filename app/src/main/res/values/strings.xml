@@ -11,7 +11,7 @@
         <string name="train">Train</string>
         <string name="plane">Plane</string>
         <!-- AccManagement -->
-        <string name="username_req">Username*</string>
+        <string name="email_address_req">email address*</string>
         <string name="password_req">Password*</string>
         <string name="new_password_req">New password*</string>
         <string name="confirm_password_req">Confirm password*</string>
@@ -57,8 +57,8 @@
     <!-- Page Account -->
     <string name="title_account">Account</string>
     <string name="account_label_img">account_img</string>
-    <string name="account_change_your_username">Change your username ?</string>
-    <string name="account_new_username">New username</string>
+    <string name="account_change_your_email">Change your email address ?</string>
+    <string name="account_new_email">New email address</string>
     <string name="account_change_your_password">Change your password ?</string>
     <string name="account_change_your_secret_response">Change your secret response ?</string>
     <string name="account_new_response">New response</string>
@@ -70,7 +70,7 @@
     <!-- Page Reset_Password -->
     <string name="title_reset_password">Reset password</string>
     <string name="reset_password_img">reset password_img</string>
-    <string name="reset_password_enter_your_username">Enter your username</string>
+    <string name="reset_password_enter_your_email_address">Enter your email address</string>
     <string name="reset_password_enter_your_new_password">Enter your new password</string>
     <string name="reset_password_answer_your_secret_question">Answer your secret question</string>
     <string name="reset_password_submit">submit</string>
@@ -83,7 +83,7 @@
     <string name="act_description">Activity Description</string>
     <string name="delete">delete</string>
     <string name="password">Password</string>
-    <string name="email">Email Adress</string>
+    <string name="email">Email Address</string>
     <string name="donthaveacc">Don\'t have an account ? Sign in here</string>
     <string name="welcome">Welcome !</string>
     <string name="add_an_activity_bottomtext">Let\'s add an activity !</string>

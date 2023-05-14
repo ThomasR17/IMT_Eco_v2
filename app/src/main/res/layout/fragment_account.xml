@@ -1,15 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizontal_recycler_view"
+        android:id="@+id/account_horizontal_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_rounded_bg"
+        android:layout_marginHorizontal="@dimen/item_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_change_your_email" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/acc_input_email"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:hint="@string/account_new_email"/>
+
+            <Button
+                android:id="@+id/account_email_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ok"
+                android:backgroundTint="@color/darkGreen"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_rounded_bg"
+        android:layout_marginHorizontal="@dimen/item_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_change_your_password" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/acc_input_password"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:hint="@string/account_new_response"/>
+
+            <Button
+                android:id="@+id/account_password_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ok"
+                android:backgroundTint="@color/darkGreen"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_rounded_bg"
+        android:layout_marginHorizontal="@dimen/item_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_change_your_secret_response" />
+
+        <Spinner
+            android:id="@+id/account_spinnerSecretQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_rounded_bg"
+            android:entries="@array/secret_question"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:hint="@string/account_new_response"/>
+
+            <Button
+                android:id="@+id/account_secret_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ok"
+                android:backgroundTint="@color/darkGreen"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
