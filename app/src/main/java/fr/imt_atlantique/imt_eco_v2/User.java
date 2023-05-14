@@ -25,28 +25,25 @@ public class User {
     public double total_CO2_visio=0;
     public double total_min_visio=0;
 
-    public User(ArrayList<Activity> activities, String email, String password, String secretWord) {
-        this.activities = activities;
+    public User(String email, String password, String secretWord) {
+        this.activities = new ArrayList<Activity>();
         this.email = email;
         this.password = password;
         this.secretWord = secretWord;
     }
 
     public static User Example(){
-        //Stockage de la liste d'act
-        ArrayList<Activity> listAct=new ArrayList<Activity>();
+        User u = new User("email", "password", "secretword");
         //Voiture
-        listAct.add(new Transport(0, 15.49));
+        u.addActivity(new Transport(0, 15.49));
         //train
-        listAct.add(new Transport(1, 1.5));
+        u.addActivity(new Transport(1, 1.5));
         //plane
-        listAct.add(new Transport(2, 10.5));
+        u.addActivity(new Transport(2, 10.5));
         //mail
-        listAct.add(new Mail(1, true, true));
+        u.addActivity(new Mail(1, true, true));
         //visio
-        listAct.add(new Visio(10));
-        User u = new User(listAct, "email", "password", "secretword");
-        u.maj();
+        u.addActivity(new Visio(10));
         return u;
     }
 
@@ -54,31 +51,7 @@ public class User {
         for(int i=0; i<activities.size();i++){
             Activity a=activities.get(i);
             total_CO2+=a.getEmCO2();
-            switch (a.getTypeAct()){
-                case ("Transport"):
-                    switch (((Transport) a).getModeTransport()){
-                        case 0:
-                            total_CO2_car+=a.getEmCO2();
-                            total_km_car+=((Transport) a).getNbKm();
-                            break;
-                        case 1:
-                            total_CO2_train+=a.getEmCO2();
-                            total_km_train+=((Transport) a).getNbKm();
-                            break;
-                        case 2:
-                            total_CO2_plane+=a.getEmCO2();
-                            total_km_plane+=((Transport) a).getNbKm();
-                    }
-                    break;
-                case ("Mail"):
-                    total_CO2_mail+=a.getEmCO2();
-                    total_nb_mail+=((Mail)a).getNbMail();
-                    break;
-                case("Visio"):
-                    total_CO2_visio+=a.getEmCO2();
-                    total_min_visio+=((Visio)a).getNbMin();
-                    break;
-            }
+
         }
     }
 
@@ -87,14 +60,70 @@ public class User {
         return activities;
     }
 
-    public void addActivity(Activity activity) {
-        activities.add(activity);
-        maj();
+    public void addActivity(Activity a) {
+        activities.add(a);
+        total_CO2+=a.getEmCO2();
+        switch (a.getTypeAct()){
+            case ("Transport"):
+                switch (((Transport) a).getModeTransport()){
+                    case 0:
+                        total_CO2_car+=a.getEmCO2();
+                        total_km_car+=((Transport) a).getNbKm();
+                        break;
+                    case 1:
+                        total_CO2_train+=a.getEmCO2();
+                        total_km_train+=((Transport) a).getNbKm();
+                        break;
+                    case 2:
+                        total_CO2_plane+=a.getEmCO2();
+                        total_km_plane+=((Transport) a).getNbKm();
+                }
+                break;
+            case ("Mail"):
+                total_CO2_mail+=a.getEmCO2();
+                total_nb_mail+=((Mail)a).getNbMail();
+                break;
+            case("Visio"):
+                total_CO2_visio+=a.getEmCO2();
+                total_min_visio+=((Visio)a).getNbMin();
+                break;
+        }
     }
 
-    public void removeActivity(Activity activity){
-        activities.remove(activity);
-        maj();
+    public void removeActivity(Activity a){
+        activities.remove(a);
+        total_CO2-=a.getEmCO2();
+        switch (a.getTypeAct()){
+            case ("Transport"):
+                switch (((Transport) a).getModeTransport()){
+                    case 0:
+                        total_CO2_car-=a.getEmCO2();
+                        total_km_car-=((Transport) a).getNbKm();
+                        break;
+                    case 1:
+                        total_CO2_train-=a.getEmCO2();
+                        total_km_train-=((Transport) a).getNbKm();
+                        break;
+                    case 2:
+                        total_CO2_plane-=a.getEmCO2();
+                        total_km_plane-=((Transport) a).getNbKm();
+                }
+                break;
+            case ("Mail"):
+                total_CO2_mail-=a.getEmCO2();
+                total_nb_mail-=((Mail)a).getNbMail();
+                break;
+            case("Visio"):
+                total_CO2_visio-=a.getEmCO2();
+                total_min_visio-=((Visio)a).getNbMin();
+                break;
+        }
+    }
+
+    public void removeLastActivity(){
+        if (activities.size()!=0){
+            removeActivity(activities.get(activities.size()-1));
+        }
     }
 
     public String getEmail() {

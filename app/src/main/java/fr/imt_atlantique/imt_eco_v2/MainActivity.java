@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import fr.imt_atlantique.imt_eco_v2.fragments.AccountFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.AddAnActivityFragment;
+import fr.imt_atlantique.imt_eco_v2.fragments.CompareFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.DashboardFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
     public User user=User.Example();
     Fragment addAnActivityFragment;
     Fragment dashboardFragment;
-    //Fragment compareFragment;
+    Fragment compareFragment;
     Fragment accountFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addAnActivityFragment = new AddAnActivityFragment(this);
-        //compareFragment = new CompareFragment();
+        compareFragment = new CompareFragment(this);
         dashboardFragment = new DashboardFragment(this);
         accountFragment = new AccountFragment(this);
 
@@ -43,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.nav_add_an_activity:
                     loadFragment(addAnActivityFragment, R.string.title_add_an_activity);
                     return true;
-        /*
-            case R.id.nav_compare:
-                loadFragment(compareFragment, R.string.title_compare);
+
+                case R.id.nav_compare:
+                    loadFragment(compareFragment, R.string.title_compare);
                 return true;
-             */
+
                 case R.id.nav_dashboard:
                     loadFragment(dashboardFragment, R.string.title_dashboard);
                     return true;

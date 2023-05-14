@@ -1,5 +1,6 @@
 package fr.imt_atlantique.imt_eco_v2.adapter;
 
+import android.icu.number.ScientificNotation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,12 @@ public class SceneAdapter extends RecyclerView.Adapter<SceneAdapter.ViewHolder> 
         this.list_act=context.user.getActivities();
         this.layoutId=layoutId;
     }
+
+    public SceneAdapter reset(MainActivity context){
+        this.context=context;
+        return this;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView actImage;
         public TextView actName;
@@ -48,7 +55,6 @@ public class SceneAdapter extends RecyclerView.Adapter<SceneAdapter.ViewHolder> 
         View view = LayoutInflater
                 .from(parent.getContext())
                 .inflate(layoutId, parent, false);
-
         return new ViewHolder(view);
     }
 
@@ -64,19 +70,19 @@ public class SceneAdapter extends RecyclerView.Adapter<SceneAdapter.ViewHolder> 
                         //voiture
                         holder.actImage.setImageResource(R.drawable.ic_car);
                         holder.actName.setText("Car : "+((Transport) act).getNbKm()+" km");
-                        holder.actDesc.setText(act.getTypeAct()+" "+act.getEmCO2()+" kg CO2");
+                        holder.actDesc.setText(act.getTypeAct()+" "+String.format("%.2f", act.getEmCO2())+" kg CO2");
                         break;
                     case 1:
                         //train
                         holder.actImage.setImageResource(R.drawable.ic_train);
                         holder.actName.setText("Train : "+((Transport) act).getNbKm()+" km");
-                        holder.actDesc.setText(act.getTypeAct()+" "+act.getEmCO2()+" kg CO2");
+                        holder.actDesc.setText(act.getTypeAct()+" "+String.format("%.2f", act.getEmCO2())+" kg CO2");
                         break;
                     case 2:
                         //avion
                         holder.actImage.setImageResource(R.drawable.ic_plane);
                         holder.actName.setText("Plane : "+((Transport) act).getNbKm()+" km");
-                        holder.actDesc.setText(act.getTypeAct()+" "+act.getEmCO2()+" kg CO2");
+                        holder.actDesc.setText(act.getTypeAct()+" "+String.format("%.2f", act.getEmCO2())+" kg CO2");
                         break;
                 }
                 break;
@@ -84,23 +90,23 @@ public class SceneAdapter extends RecyclerView.Adapter<SceneAdapter.ViewHolder> 
                 //mail
                 holder.actImage.setImageResource(R.drawable.ic_mail);
                 holder.actName.setText("Mail : "+((Mail) act).getNbMail()+" mails");
-                holder.actDesc.setText("Communication "+act.getEmCO2()+" kg CO2");
+                if (act.getEmCO2()<10e-3) {
+                    holder.actDesc.setText("Communication " + String.format("%.2f", act.getEmCO2()*1000) + " g CO2");
+                }else {
+                    holder.actDesc.setText(act.getTypeAct()+" "+String.format("%.2f", act.getEmCO2())+" kg CO2");
+                }
                 break;
             case "Visio":
                 //visio
                 holder.actImage.setImageResource(R.drawable.ic_visio);
                 holder.actName.setText("Visio : "+((Visio) act).getNbMin()+" min");
-                holder.actDesc.setText("Communication "+act.getEmCO2()+" kg CO2");
+                if (act.getEmCO2()<10e-3) {
+                    holder.actDesc.setText("Communication " + String.format("%.2f", act.getEmCO2()*1000) + " g CO2");
+                }else {
+                    holder.actDesc.setText(act.getTypeAct()+" "+String.format("%.2f", act.getEmCO2())+" kg CO2");
+                }
                 break;
         }
-        /*-************************************
-        ICI, essayer de faire le delete élément par élément, les elem actualisent pas et disparaisse que avec changement img
-        */
-        ImageButton delete=holder.itemView.findViewById(R.id.delete_icon);
-        delete.setOnClickListener(v -> {
-            context.user.removeActivity(act);
-        });
-
     }
 
     @Override

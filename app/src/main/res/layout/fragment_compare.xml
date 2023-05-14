@@ -13,17 +13,16 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/add_an_activity_car_input"
+            android:id="@+id/compare_car_input"
             style="@style/DefaultTextStyle"
             android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="0.7"
+            android:layout_height="60dp"            android:layout_weight="0.7"
             android:hint="@string/Distance_in_km"
             android:inputType="numberDecimal"
             android:paddingLeft="@dimen/default_margin"
             tools:ignore="DuplicateSpeakableTextCheck" />
         <ImageButton
-            android:id="@+id/add_an_activity_car_submit"
+            android:id="@+id/compare_car_submit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
@@ -41,24 +40,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/add_an_activity_train_input"
+            android:id="@+id/compare_train_input"
             android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="0.7"
+            android:layout_height="60dp"            android:layout_weight="0.7"
             android:hint="@string/Distance_in_km"
             android:paddingLeft="@dimen/default_margin"
             style="@style/DefaultTextStyle"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:inputType="numberDecimal"
             />
 
         <ImageButton
-            android:id="@+id/add_an_activity_train_submit"
+            android:id="@+id/compare_train_submit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:src="@drawable/ic_train"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:contentDescription="icon2"
             android:background="@null"
             android:onClick="onAddActivityTrainSubmitClick"
@@ -72,23 +70,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/add_an_activity_plane_input"
+            android:id="@+id/compare_plane_input"
             android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="0.7"
+            android:layout_height="60dp"            android:layout_weight="0.7"
             android:hint="@string/Distance_in_km"
             android:paddingLeft="@dimen/default_margin"
             style="@style/DefaultTextStyle"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:inputType="numberDecimal"
             />
         <ImageButton
-            android:id="@+id/add_an_activity_plane_submit"
+            android:id="@+id/compare_plane_submit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:src="@drawable/ic_plane"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:contentDescription="icon3"
             android:background="@null"
             android:onClick="onAddActivityPlaneSubmitClick"
@@ -101,23 +98,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/add_an_activity_mail_input"
+            android:id="@+id/compare_mail_input"
             android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="0.7"
+            android:layout_height="60dp"            android:layout_weight="0.7"
             android:hint="@string/Number_of_mail"
             android:paddingLeft="@dimen/default_margin"
             style="@style/DefaultTextStyle"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:inputType="number"
             />
         <ImageButton
-            android:id="@+id/add_an_activity_mail_submit"
+            android:id="@+id/compare_mail_submit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:src="@drawable/ic_mail"
-            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginTop="@dimen/item_margin"
             android:contentDescription="icon4"
             android:background="@null"
             android:onClick="onAddActivityMailSubmitClick"
@@ -135,13 +131,13 @@
             style="@style/DefaultTextStyle"/>
 
         <RadioButton
-            android:id="@+id/add_an_activity_mail_OneMo"
+            android:id="@+id/compare_mail_OneMo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/oneMo"/>
 
         <RadioButton
-            android:id="@+id/add_an_activity_mail_FiveMo"
+            android:id="@+id/compare_mail_FiveMo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fiveMo"
@@ -154,23 +150,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/add_an_activity_visio_input"
+            android:id="@+id/compare_visio_input"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_weight="0.7"
             android:hint="@string/Time_spent_in_minutes"
             android:paddingLeft="@dimen/default_margin"
             style="@style/DefaultTextStyle"
-            android:layout_marginTop="@dimen/default_margin"
             android:inputType="number"
             />
         <ImageButton
-            android:id="@+id/add_an_activity_visio_submit"
+            android:id="@+id/compare_visio_submit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:src="@drawable/ic_visio"
-            android:layout_marginTop="@dimen/default_margin"
             android:contentDescription="icon5"
             android:background="@null"
             android:onClick="onAddActivityVisioSubmitClick"
@@ -178,14 +172,103 @@
             />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/add_an_activity_bottom_text"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/darkGreen"
+        android:layout_marginTop="@dimen/item_margin"
+        android:paddingHorizontal="@dimen/item_margin"
+        android:paddingVertical="@dimen/item_margin"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/compare_act1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="@string/compare_enter_an_activity"
+            android:paddingHorizontal="@dimen/item_margin"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:text="@string/compare_vs"
+            android:paddingHorizontal="@dimen/item_margin"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/compare_act2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="@string/compare_enter_an_activity"
+            android:paddingHorizontal="@dimen/item_margin"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14dp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:includeFontPadding="false"
-        android:layout_marginTop="@dimen/default_margin"
-        android:text="@string/add_an_activity_bottomtext"
-        android:textStyle="italic" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/item_margin"
+        android:paddingVertical="@dimen/item_margin">
+
+        <TextView
+            android:id="@+id/compare_act1_CO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/compare_act1"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/compare_delete_act1"
+            android:contentDescription="icon_suppr_act1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:minWidth="30dp"
+            android:minHeight="30dp"
+            android:src="@drawable/ic_suppress"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compare_vs"
+            android:paddingHorizontal="@dimen/item_margin"
+            />
+
+        <TextView
+            android:id="@+id/compare_act2_CO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/compare_act2"
+            android:paddingHorizontal="10dp"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/compare_delete_act2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:contentDescription="icon_suppr_act2"
+            android:minWidth="30dp"
+            android:minHeight="30dp"
+            android:src="@drawable/ic_suppress"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -296,15 +296,32 @@
             android:textColor="@android:color/secondary_text_light" />
     </LinearLayout>
 
-    <TextView
-        style="@style/DefaultTextStyle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_history"
-        android:layout_marginTop="@dimen/default_margin"
-        android:layout_marginBottom="@dimen/item_margin"
-        android:layout_marginStart="@dimen/default_margin" />
-    
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_history"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:layout_marginStart="@dimen/default_margin" />
+
+        <ImageButton
+            android:id="@+id/dashboard_delete_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="@null"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginLeft="200dp"
+            android:layout_gravity="bottom|right"
+            />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vertical_recycler_view"
         android:layout_width="match_parent"

@@ -49,9 +49,9 @@
 
     <!-- Page Compare -->
     <string name="title_compare">Compare</string>
-    <string name="compare_act1">CO2 Act</string>
+    <string name="compare_act1">Activity 1</string>
     <string name="compare_vs">VS</string>
-    <string name="compare_act2">CO2 Act2</string>
+    <string name="compare_act2">Activity 2</string>
     <string name="compare_reset">Reset</string>
 
     <!-- Page Account -->
@@ -87,5 +87,6 @@
     <string name="donthaveacc">Don\'t have an account ? Sign in here</string>
     <string name="welcome">Welcome !</string>
     <string name="add_an_activity_bottomtext">Let\'s add an activity !</string>
+    <string name="compare_enter_an_activity">Enter an activity</string>
 
 </resources>
