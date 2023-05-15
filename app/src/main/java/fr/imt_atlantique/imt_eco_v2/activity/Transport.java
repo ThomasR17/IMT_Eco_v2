@@ -11,22 +11,11 @@ public class Transport extends Activity {
         super("Transport");
         this.nbKm = nbKm;
         this.modeTransport = modeTransport;
-        switch (modeTransport){
-            case 0:
-                setEmCO2(nbKm*stat_CO2[0]);
-            case 1:
-                setEmCO2(nbKm*stat_CO2[1]);
-            case 2:
-                setEmCO2(nbKm*stat_CO2[2]);
-        }
+        setEmCO2(nbKm*stat_CO2[modeTransport]);
     }
 
     public double getNbKm() {
         return nbKm;
-    }
-
-    public void setNbKm(int nbKm) {
-        this.nbKm = nbKm;
     }
 
     public int getModeTransport() {

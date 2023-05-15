@@ -88,5 +88,7 @@
     <string name="welcome">Welcome !</string>
     <string name="add_an_activity_bottomtext">Let\'s add an activity !</string>
     <string name="compare_enter_an_activity">Enter an activity</string>
+    <string name="title_sign_up">Sign up</string>
+    <string name="actual">Actual :</string>
 
 </resources>

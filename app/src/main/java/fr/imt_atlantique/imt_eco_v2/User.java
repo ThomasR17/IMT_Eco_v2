@@ -33,13 +33,13 @@ public class User {
     }
 
     public static User Example(){
-        User u = new User("email", "password", "secretword");
+        User u = new User("email@example.com", "password", "secretword");
         //Voiture
-        u.addActivity(new Transport(0, 15.49));
+        u.addActivity(new Transport(0, 100));
         //train
-        u.addActivity(new Transport(1, 1.5));
+        u.addActivity(new Transport(1, 100));
         //plane
-        u.addActivity(new Transport(2, 10.5));
+        u.addActivity(new Transport(2, 100));
         //mail
         u.addActivity(new Mail(1, true, true));
         //visio

@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.nio.file.FileSystemLoopException;
 import java.util.ArrayList;
 
+import fr.imt_atlantique.imt_eco_v2.account.CreateAccountFragment;
 import fr.imt_atlantique.imt_eco_v2.account.Login;
 import fr.imt_atlantique.imt_eco_v2.fragments.AccountFragment;
 import fr.imt_atlantique.imt_eco_v2.fragments.AddAnActivityFragment;
@@ -34,10 +36,13 @@ base de données sur account
 public class MainActivity extends AppCompatActivity {
     //A changer en liste de User si on veut développer en plusieurs comptes
     public User user=User.Example();
-    Fragment addAnActivityFragment;
-    Fragment dashboardFragment;
-    Fragment compareFragment;
-    Fragment accountFragment;
+    public Fragment addAnActivityFragment;
+    public Fragment dashboardFragment;
+    public Fragment compareFragment;
+    public Fragment accountFragment;
+    public Fragment createAccountFragment;
+    public Fragment login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
         compareFragment = new CompareFragment(this);
         dashboardFragment = new DashboardFragment(this);
         accountFragment = new AccountFragment(this);
+        login = new Login(this);
+        createAccountFragment = new CreateAccountFragment(this);
 
-        // Charge le fragment Login par défaut
-        //loadFragment(new Login(this), R.string.title_login);
+        loadFragment(login, R.string.title_login);
 
         //navigation
         BottomNavigationView navigationView = findViewById(R.id.navigation_view);
@@ -87,5 +93,10 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    public void setBottomNavigationViewVisibility(int visibility) {
+        BottomNavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setVisibility(visibility);
     }
 }

@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:gravity="center"
-    >
-
+    android:gravity="center_horizontal">
 
 
     <TextView
+        android:id="@+id/signin"
+        style="@style/TitleTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signin"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:background="@color/white"
+        android:gravity="center"
         android:text="Sign in"
         android:textSize="35dp"
-        style="@style/TitleTextStyle"
-        android:layout_margin="50dp"
-        android:gravity="center"
-        android:background="@color/white"/>
+        />
 
     <EditText
         android:id="@+id/sign_in_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/item_margin"
         android:background="@drawable/edit_text_rounded_bg"
         android:drawableLeft="@drawable/ic_person"
         android:drawablePadding="20dp"
@@ -41,7 +42,8 @@
         android:layout_below="@id/sign_in_email"
         android:background="@drawable/edit_text_rounded_bg"
         android:hint="Password"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="@dimen/item_margin"
         android:padding="20dp"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="20dp"
@@ -54,7 +56,8 @@
         android:layout_below="@id/sign_in_password"
         android:background="@drawable/edit_text_rounded_bg"
         android:hint="Confirm Password"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="@dimen/item_margin"
         android:padding="20dp"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="20dp"
@@ -65,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:background="@drawable/edit_text_rounded_bg"
+        android:background="@color/darkGreen"
         android:entries="@array/secret_question"
         android:minHeight="48dp"
         android:spinnerMode="dropdown" />
@@ -74,7 +77,7 @@
         android:id="@+id/secret_response"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
         android:background="@drawable/edit_text_rounded_bg"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="20dp"
@@ -84,15 +87,15 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sign_in_loginbtn"
+        android:id="@+id/sign_in_button"
         android:layout_below="@id/sign_in_confirm_password"
         android:text="@string/sign_in"
         android:backgroundTint="@color/darkGreen"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
         />
 
     <TextView
@@ -100,20 +103,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/signin"
-        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="20dp"
+        android:background="@color/white"
         android:clickable="true"
-        android:minHeight="48dp"
+        android:gravity="center"
         android:text="Already have an account ? Click Here"
-        android:textColor="@color/green" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/others"
-        android:text="or sign in with"
         android:textColor="@color/green"
-        android:layout_centerHorizontal="true"/>
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
 
     <LinearLayout
@@ -122,21 +118,30 @@
         android:layout_alignParentBottom="true"
         android:gravity="center">
 
+        <TextView
+            android:id="@+id/others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:text="or sign in with"
+            android:textColor="@color/green"
+            tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="20dp"
+            android:layout_marginHorizontal="20dp"
             android:src="@drawable/google"/>
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="20dp"
+            android:layout_marginHorizontal="20dp"
             android:src="@drawable/facebook"/>
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="20dp"
+            android:layout_marginHorizontal="20dp"
             android:src="@drawable/twitter"/>
     </LinearLayout>
 </LinearLayout>
