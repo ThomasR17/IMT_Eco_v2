@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -115,12 +116,23 @@ public class AddAnActivityFragment extends Fragment {
 
         //Ajout Activité: Mail
         ImageButton mailSubmit = view.findViewById(R.id.add_an_activity_mail_submit);
+
+        RadioGroup radioGroup = view.findViewById(R.id.add_an_activity_radiogroup);
+        RadioButton inputBox1 = view.findViewById(R.id.add_an_activity_mail_OneMo);
+        RadioButton inputBox5 = view.findViewById(R.id.add_an_activity_mail_FiveMo);
+
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == R.id.add_an_activity_mail_OneMo) {
+                inputBox5.setChecked(false);
+            } else if (checkedId == R.id.add_an_activity_mail_FiveMo) {
+                inputBox1.setChecked(false);
+            }
+        });
+
         mailSubmit.setOnClickListener(v -> {
             EditText inputMail = view.findViewById(R.id.add_an_activity_mail_input);
             String nbMailString = inputMail.getText().toString();
 
-            RadioButton inputBox1 = view.findViewById(R.id.add_an_activity_mail_OneMo);
-            RadioButton inputBox5 = view.findViewById(R.id.add_an_activity_mail_FiveMo);
             boolean pj_unMo=inputBox1.isChecked();
             boolean pj_cinqMo=inputBox5.isChecked();
 
@@ -140,7 +152,7 @@ public class AddAnActivityFragment extends Fragment {
                         } else if (pj_unMo == true) {
                             bottomText.setText("Activity added : " + nbMail + " mails with a 1 Mo attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
                         } else {
-                            bottomText.setText("Activity added : " + nbMail + " mails with a 5 attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
+                            bottomText.setText("Activity added : " + nbMail + " mails with a 5 Mo attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
                         }
                     } else {
                         if (!(pj_unMo || pj_cinqMo)) {
@@ -148,7 +160,7 @@ public class AddAnActivityFragment extends Fragment {
                         } else if (pj_unMo == true) {
                             bottomText.setText("Activity added : " + nbMail + " mail with a 1 Mo attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
                         } else {
-                            bottomText.setText("Activity added : " + nbMail + " mail with a 5 attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
+                            bottomText.setText("Activity added : " + nbMail + " mail with a 5 Mo attachment e.g " + String.format("%.2f", act.getEmCO2() * 1000) + "gCO2");
                         }
                     }
                 } else {
@@ -158,7 +170,7 @@ public class AddAnActivityFragment extends Fragment {
                         } else if (pj_unMo == true) {
                             bottomText.setText("Activity added : " + nbMail + " mails with a 1 Mo attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
                         } else {
-                            bottomText.setText("Activity added : " + nbMail + " mails with a 5 attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
+                            bottomText.setText("Activity added : " + nbMail + " mails with a 5 Mo attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
                         }
                     } else {
                         if (!(pj_unMo || pj_cinqMo)) {
@@ -166,7 +178,7 @@ public class AddAnActivityFragment extends Fragment {
                         } else if (pj_unMo == true) {
                             bottomText.setText("Activity added : " + nbMail + " mail with a 1 Mo attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
                         } else {
-                            bottomText.setText("Activity added : " + nbMail + " mail with a 5 attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
+                            bottomText.setText("Activity added : " + nbMail + " mail with a 5 Mo attachment e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
                         }
                     }
 

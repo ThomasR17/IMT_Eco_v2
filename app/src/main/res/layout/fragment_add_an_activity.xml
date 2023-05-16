@@ -134,18 +134,25 @@
             android:text="@string/with_attachment"
             style="@style/DefaultTextStyle"/>
 
-        <RadioButton
-            android:id="@+id/add_an_activity_mail_OneMo"
+        <RadioGroup
+            android:id="@+id/add_an_activity_radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/oneMo"/>
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/add_an_activity_mail_FiveMo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fiveMo"
-            />
+            <RadioButton
+                android:id="@+id/add_an_activity_mail_OneMo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oneMo"/>
+
+            <RadioButton
+                android:id="@+id/add_an_activity_mail_FiveMo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fiveMo"
+                />
+        </RadioGroup>
 
     </LinearLayout>
 
