@@ -47,14 +47,6 @@ public class User {
         return u;
     }
 
-    public void maj(){
-        for(int i=0; i<activities.size();i++){
-            Activity a=activities.get(i);
-            total_CO2+=a.getEmCO2();
-
-        }
-    }
-
     // Getters and setters for activities, email, password and secretWord
     public ArrayList<Activity> getActivities() {
         return activities;

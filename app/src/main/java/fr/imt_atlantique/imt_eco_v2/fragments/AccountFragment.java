@@ -120,7 +120,7 @@ public class AccountFragment extends Fragment {
             }
         });
 
-// Change password
+        // Change password
         TextView password = view.findViewById(R.id.account_password);
         password.setText(context.user.getPassword());
         Button passwordButton = view.findViewById(R.id.account_password_submit);
