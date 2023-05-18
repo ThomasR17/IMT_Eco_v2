@@ -76,7 +76,7 @@
     <string name="reset_password_submit">submit</string>
 
     <!-- Sign in -->
-    <string name="sign_in">Sign in</string>
+    <string name="sign_in">Sign up</string>
     <string name="sign_in_create_an_account">Create an account</string>
     <string name="sign_in_it_s_quick_and_easy">It’s quick and easy.</string>
     <string name="act_name">Activity Name</string>
@@ -84,7 +84,7 @@
     <string name="delete">delete</string>
     <string name="password">Password</string>
     <string name="email">Email Address</string>
-    <string name="donthaveacc">Don\'t have an account ? Sign in here</string>
+    <string name="donthaveacc">Don\'t have an account ? Sign up here</string>
     <string name="welcome">Welcome !</string>
     <string name="add_an_activity_bottomtext">Let\'s add an activity !</string>
     <string name="compare_enter_an_activity">Enter an activity</string>

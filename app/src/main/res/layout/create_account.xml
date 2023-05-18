@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/signin"
+        android:id="@+id/signup"
         style="@style/TitleTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_marginVertical="@dimen/default_margin"
         android:background="@color/white"
         android:gravity="center"
-        android:text="Sign in"
+        android:text="Sign up"
         android:textSize="35dp"
         />
 
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:background="@color/darkGreen"
+        android:background="@color/lightGray"
         android:entries="@array/secret_question"
         android:minHeight="48dp"
         android:spinnerMode="dropdown" />
@@ -102,7 +102,6 @@
         android:id="@+id/Already_have_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signin"
         android:layout_marginHorizontal="20dp"
         android:background="@color/white"
         android:clickable="true"
