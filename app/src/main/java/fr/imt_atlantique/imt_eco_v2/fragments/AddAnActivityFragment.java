@@ -46,14 +46,22 @@ public class AddAnActivityFragment extends Fragment {
             String kmString = inputKm.getText().toString();
 
             if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
-                // Créer une nouvelle instance Transport
-                Transport act = new Transport(0, Double.parseDouble(kmString));
+                if (Double.parseDouble(kmString)<20000){
+                    // Créer une nouvelle instance Transport
+                    Transport act = new Transport(0, Double.parseDouble(kmString));
 
-                //Ajout dans les activités de User
-                context.user.addActivity(act);
+                    //Ajout dans les activités de User
+                    context.user.addActivity(act);
 
-                // Informer de la confirmation d'ajout de la nouvelle activité
-                bottomText.setText("Activity added : Car " + kmString + " km e.g " + String.format("%.2f",act.getEmCO2()) + "kgCO2");
+                    // Informer de la confirmation d'ajout de la nouvelle activité
+                    bottomText.setText("Activity added : Car " + kmString + " km e.g " + String.format("%.2f",act.getEmCO2()) + "kgCO2");
+                }
+                else{
+                    builder.setTitle("Fail");
+                    builder.setMessage("Please enter a value inferior to 20 0000.");
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
             }else{
                 builder.setTitle("Fail");
                 builder.setMessage("Please enter a valid value.");
@@ -71,14 +79,21 @@ public class AddAnActivityFragment extends Fragment {
             String kmString = inputKm.getText().toString();
 
             if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
-                // Créer une nouvelle instance Transport
-                Transport act = new Transport(1, Double.parseDouble(kmString));
+                if (Double.parseDouble(kmString)<20000) {
+                    // Créer une nouvelle instance Transport
+                    Transport act = new Transport(1, Double.parseDouble(kmString));
 
-                //Ajout dans les activités de User
-                context.user.addActivity(act);
+                    //Ajout dans les activités de User
+                    context.user.addActivity(act);
 
-                // Informer de la confirmation d'ajout de la nouvelle activité
-                bottomText.setText("Activity added : Train " + kmString + " km e.g " + String.format("%.2f",act.getEmCO2()) + "kgCO2");
+                    // Informer de la confirmation d'ajout de la nouvelle activité
+                    bottomText.setText("Activity added : Train " + kmString + " km e.g " + String.format("%.2f", act.getEmCO2()) + "kgCO2");
+                }else{
+                    builder.setTitle("Fail");
+                    builder.setMessage("Please enter a value inferior to 20 0000.");
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
             }else{
                 builder.setTitle("Fail");
                 builder.setMessage("Please enter a valid value.");
@@ -96,14 +111,21 @@ public class AddAnActivityFragment extends Fragment {
             String kmString = inputKm.getText().toString();
 
             if (kmString != null && !kmString.isEmpty() && !kmString.equals("0")) {
-                // Créer une nouvelle instance Transport
-                Transport act = new Transport(2, Double.parseDouble(kmString));
+                if (Double.parseDouble(kmString)<20000){
+                    // Créer une nouvelle instance Transport
+                    Transport act = new Transport(2, Double.parseDouble(kmString));
 
-                //Ajout dans les activités de User
-                context.user.addActivity(act);
+                    //Ajout dans les activités de User
+                    context.user.addActivity(act);
 
-                // Informer de la confirmation d'ajout de la nouvelle activité
-                bottomText.setText("Activity added : Plane " + kmString + " km e.g " + String.format("%.2f",act.getEmCO2()) + "kgCO2");
+                    // Informer de la confirmation d'ajout de la nouvelle activité
+                    bottomText.setText("Activity added : Plane " + kmString + " km e.g " + String.format("%.2f",act.getEmCO2()) + "kgCO2");
+                }else{
+                    builder.setTitle("Fail");
+                    builder.setMessage("Please enter a value inferior to 20 0000.");
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
             }else{
                 builder.setTitle("Fail");
                 builder.setMessage("Please enter a valid value.");

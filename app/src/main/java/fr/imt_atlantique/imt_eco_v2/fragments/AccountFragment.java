@@ -127,7 +127,7 @@ public class AccountFragment extends Fragment {
         passwordButton.setOnClickListener(v -> {
             EditText input = view.findViewById(R.id.acc_input_password);
             String newPassword = input.getText().toString();
-            if (newPassword.isEmpty()) {
+            if (newPassword.isEmpty() && validPassword(newPassword)) {
                 builder.setTitle("Fail");
                 builder.setMessage("Please enter a valid password.");
                 AlertDialog dialog = builder.create();
@@ -173,5 +173,9 @@ public class AccountFragment extends Fragment {
 
         TextView secret_response = getView().findViewById(R.id.account_secret_response);
         secret_response.setText(context.user.getSecretWord());
+    }
+
+    private boolean validPassword(String password){
+        return ((password.length()>=8)&&(!password.contains(" ")));
     }
 }
