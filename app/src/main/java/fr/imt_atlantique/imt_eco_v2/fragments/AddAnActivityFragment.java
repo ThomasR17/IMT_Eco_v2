@@ -215,6 +215,8 @@ public class AddAnActivityFragment extends Fragment {
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }
+            //reset
+            inputMail.setText("");
         });
 
         //Ajout Activité: Visio
