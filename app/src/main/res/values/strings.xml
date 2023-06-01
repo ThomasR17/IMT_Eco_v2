@@ -18,6 +18,7 @@
         <string name="your_answer_req">Your answer</string>
         <!-- Modifiable -->
         <string-array name="secret_question">
+            <item>What is your mom\'s name ? </item>
             <item>What is your dad\'s birthday ?</item>
         </string-array>
 
