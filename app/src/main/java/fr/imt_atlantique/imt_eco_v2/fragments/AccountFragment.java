@@ -43,6 +43,7 @@ public class AccountFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_account, container, false);
 
+        //Lien : https://console.firebase.google.com/project/imt-eco-v2-369b5/database/imt-eco-v2-369b5-default-rtdb/data/
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Landscapes");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
